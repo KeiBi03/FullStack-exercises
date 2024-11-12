@@ -4,7 +4,7 @@
     participant server
 
     Note right of browser: The user writes a note and clicks "Save"
-    browser->>serfver: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
     Note right of server: The server receives and stores the note
     server-->>browser: 302 Found (Redirect to /notes)
